@@ -55,7 +55,7 @@ function mainMenu(person, people){
 function searchByName(people){
   var firstName = promptFor("What is the person's first name?", chars);
   var lastName = promptFor("What is the person's last name?", chars);
-  
+
 
   var foundPerson = people.filter(function(person){
     if(person.firstName === firstName && person.lastName === lastName){
@@ -91,7 +91,7 @@ function displayPeople(people){
     currentDate = [2019, 5, 28]
   }
 
-  
+
 age.map( function( el){
 return el
 });
@@ -104,6 +104,65 @@ function displayPerson(person){
   personInfo += "Last Name: " + person.lastName + "\n";
   // TODO: finish getting the rest of the information to display
   alert(personInfo);
+}
+
+function searchbyHeight(height){
+  let inches === promptFor("What is the person's height?");
+
+  let foundinches === height.filter(function(person){
+    if (person.height === height){
+      return true;
+    }
+    else{
+      return false;
+    }
+  })
+      return foundIinches;
+
+  }
+
+  function searchByWeight(weight){
+    let pounds === weight.filter(function(person))
+    if(person.weight === weight){
+      return true;
+    }
+      else{
+          return false;
+      }
+  })
+          return foundPounds;
+      }
+          return searchbyWeight;
+
+  }
+
+
+function searchByGender(gender){
+ var gender = promptFor("what is the person's gender?", chars)
+
+ let foundGender = gender.filter(function(person){
+   if (person.gender === gender) {
+     return true;
+   }
+   else{
+     return false;
+   }
+})
+
+function searchByAge(yearsOld){
+var age = promptFor("What is the person's age?", chars);
+
+var foundAge = yearsOld.filter(function(person){
+ if (person.yearsOld === yearsOld){
+   return true;
+ }
+ else{
+   return false;
+ }
+
+
+
+})
 }
 
 // function that prompts and validates user input
