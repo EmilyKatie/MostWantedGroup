@@ -33,12 +33,17 @@ function mainMenu(person, people){
 
   switch(displayOption){
     case "info":
+      return person.firstName, person.lastName;
+      //console.log(person.firstName, person.lastName) OR prompt?
     // TODO: get person's info
     break;
     case "family":
+      return people.parents, people.currentSpouse;
+      //console.log(people.parents, people.currentSpouse OR prompt?
     // TODO: get person's family
     break;
     case "descendants":
+      return people.grandparents;
     // TODO: get person's descendants
     break;
     case "restart":
@@ -49,13 +54,16 @@ function mainMenu(person, people){
     default:
     return mainMenu(person, people); // ask again
   }
+  function app()
+  x = document.getElementById("data") 
+x.innerHTML = people.map(app)
 }
 
 
 function searchByName(people){
   var firstName = promptFor("What is the person's first name?", chars);
   var lastName = promptFor("What is the person's last name?", chars);
-
+  
 
   var foundPerson = people.filter(function(person){
     if(person.firstName === firstName && person.lastName === lastName){
@@ -76,25 +84,22 @@ function displayPeople(people){
   }).join("\n"));
 }
 
+//   var year = new Age();
+//   document.getElementById("data").innerHTML = year.getFullYear();
 
-  var year = new Age();
-  document.getElementById("data").innerHTML = year.getFullYear();
+//   var month = new Age();
+//   document.getElementById("data").innerHTML = month.getFullMonth();
 
-  var month = new Age();
-  document.getElementById("data").innerHTML = month.getFullMonth();
+//   var day = new Age();
+//   document.getElementById("data").innerHTML = day.getFullDay();
 
-  var day = new Age();
-  document.getElementById("data").innerHTML = day.getFullDay();
-
-  function displayAge(newAge){
-    date [] = "dob"
-    currentDate = [2019, 5, 28]
-  }
-
-
-age.map( function( el){
-return el
-});
+//   function displayAge(newAge){
+//     date () = "dob";
+//     currentDate = [2019, 5, 28]
+//   }
+//   age.map( function( el){
+//   return el
+// });
 
 
 function displayPerson(person){
@@ -105,65 +110,14 @@ function displayPerson(person){
   // TODO: finish getting the rest of the information to display
   alert(personInfo);
 }
-
-function searchbyHeight(height){
-  let inches === promptFor("What is the person's height?");
-
-  let foundinches === height.filter(function(person){
-    if (person.height === height){
-      return true;
-    }
-    else{
-      return false;
-    }
-  })
-      return foundIinches;
-
-  }
-
-  function searchByWeight(weight){
-    let pounds === weight.filter(function(person))
-    if(person.weight === weight){
-      return true;
-    }
-      else{
-          return false;
-      }
-  })
-          return foundPounds;
-      }
-          return searchbyWeight;
-
-  }
-
-
-function searchByGender(gender){
- var gender = promptFor("what is the person's gender?", chars)
-
- let foundGender = gender.filter(function(person){
-   if (person.gender === gender) {
-     return true;
-   }
-   else{
-     return false;
-   }
-})
-
-function searchByAge(yearsOld){
-var age = promptFor("What is the person's age?", chars);
-
-var foundAge = yearsOld.filter(function(person){
- if (person.yearsOld === yearsOld){
-   return true;
- }
- else{
-   return false;
- }
-
-
-
-})
-}
+function searchByTrait(trait){
+  var age = promptFor("What is the person's age?", chars);
+  var height = promptFor("What is the person's height?", chars);
+  var weight = promptFor("What is the person's weight?", chars);
+  var gender = promptFor("What is the person's gender?", chars);
+ 
+ 
+var foundTrait = trait.filter(function(trait)
 
 // function that prompts and validates user input
 function promptFor(question, valid){
@@ -182,6 +136,5 @@ function yesNo(input){
 function chars(input){
   return true; // default validation only
 }
-function searchByTrait(x){
-  document.getElementById ("data").innerHTML = trait.map(searchByTrait)
-}
+// function searchByTrait(x){
+//   document.getElementById ("data").innerHTML = trait.map(searchByTrait)
